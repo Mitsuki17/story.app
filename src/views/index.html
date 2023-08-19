@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Story APP</title>
+
+  </head>
+  <body>
+    <header>
+      <nav-app brandName="<%= brandName %>"></nav-app>   
+    </header>
+
+    <main>
+      <div class="main-content">
+        <div class="container py-5">
+          <h1 class="mb-3">Dashboard</h1>
+
+          <!-- Card Information -->
+          <div class="row mb-8 g-6">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 bg-primary text-bg-primary bg-gradient">
+                <div class="card-body">
+                  <h1 class="card-title fs-2">
+                    <span id="numberOfStories">0</span> Cerita<br />
+                    <span class="fs-5">Bulan ini</span>
+                  </h1>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+
+          <!-- Records -->
+          <div>
+            <div class="d-flex justify-content-between align-items-center">
+              <h1>Daftar Buku</h1>
+              <a class="btn btn-primary text-capitalize" href="transactions/add.html">
+                <i class="bi bi-plus-lg me-1"></i>Tambah Buku
+              </a>
+            </div>
+            <div  class="container">
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4" id="recordsTable"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="main-footer bg-info">
+        <div class="container px-3 py-4">
+          <footer-app></footer-app>
+        </div>
+      </div>
+    </footer>
+
+    
+    
+    <modal-transaction
+      title="Rincian Transaksi"
+      class="modal fade"
+      id="recordDetailModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+    ></modal-transaction>
+    
+  </body>
+</html>

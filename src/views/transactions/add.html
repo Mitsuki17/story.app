@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><%= htmlWebpackPlugin.options.title %> | Tambah Buku</title>
+  </head>
+  <body>
+    <header>
+      <nav-app brandName="<%= brandName %>"></nav-app>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <div class="container py-5">
+          <h1 class="mb-3">Tambah Buku</h1>
+
+          <form class="row g-3" id="editRecordForm" novalidate>
+            <div class="col-12 col-md-6">
+              <label for="validationCustomRecordName" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="validationCustomRecordName" required />
+              <div class="invalid-feedback">Wajib diisi</div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="validationCustomNotes" class="form-label">Catatan</label>
+              <textarea class="form-control" id="validationCustomNotes" rows="3"></textarea>
+              <div class="invalid-feedback">Wajib diisi</div>
+            </div>
+
+            
+            <div class>
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="main-footer bg-info">
+        <div class="container px-3 py-4">
+          <footer-app></footer-app>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
